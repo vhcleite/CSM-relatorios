@@ -1,0 +1,122 @@
+<html>
+    <head>
+        <title>Relatorio 2</title>
+
+        <style>
+            .center {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+            }
+        </style>
+
+    </head>
+    <body>
+        <header style="text-align: center;">
+            <img src="media/ufabc_logo.png" style="width: 150px; height: 150px;">
+            <h2>UNIVERSIDADE FEDERAL DO ABC</h2>
+            <h2>RELATÓRIO 2 - IMAGEM E CAPTURA VIDEO</h2>
+            <section style="margin-top: 100px;">
+                <h3>Resumo em áudio:</h3>
+                <audio controls>
+                    <source src="media/audio-descricao.ogg" type="audio/ogg">
+                </audio>
+            </section>
+        </header>
+        
+        <article style="margin-top: 70px;">
+            <h3 style="text-align: center;">Procedimentos</h3>
+                <p style="text-align: center;">
+                    Nesta prática, foram feitas alterações simples em imagens e vídeos utilizando a linguagem Python na ferramenta Google Colab. São apresentadas as fotos dos quatro integrantes do grupo e seus avatares, uma versão em tons de cinza dessa foto, e versões com 5% e o dobro de resolução.
+                </p>
+
+                <p style="text-align: center;">
+                    Também são mostrados dois vídeos: um com movimentos rápidos e outro com movimentos lentos. São feitas modificações nas resoluções desses vídeos, produzindo versões com 50% e 25% da resolução dos vídeos originais.
+                </p>
+
+                <p style="text-align: center;">
+                    Tudo isto foi feito utilizando as bibliotecas Matplotlib, Numpy e OpenCV.
+                </p>
+
+                <a href="https://colab.research.google.com/drive/1NJP0dK0bU3CLvaeOYPFLcZBGiE_N-Cxa?usp=sharing">
+                    <h5 style="text-align: center;">Link para o Google Colab</h5>
+                </a>
+            
+            <h3 style="text-align: center;">Resultados</h3>
+                <h4 style="text-align: center;">Imagens originais x preto e branco dos membros do grupo</h4>
+                    <h5 style="text-align: center;">Original</h5>
+                    <img src='media/grupo.jpg' class="center" style="width:400px;height:400px;">
+                    <h5 style="text-align: center;">Preto e branco</h5>
+                    <img src='media/grupo_gray.jpg' class="center" style="width:400px;height:400px;">
+                
+                <h4 style="text-align: center;">Imagens com resoluções alteradas dos membros do grupo</h4>
+                    <h5 style="text-align: center;">5% de resolução</h5>
+                    <img src='media/grupo_peq.jpg' class="center" style="width:400px;height:400px;">
+                    <h5 style="text-align: center;">Original</h5>
+                    <img src='media/grupo.jpg' class="center" style="width:400px;height:400px;">
+                    <h5 style="text-align: center;">Dobro de resolução</h5>
+                    <img src='media/grupo_big.jpg' class="center" style="width:400px;height:400px;">
+
+
+                <h4 style="text-align: center;">Imagens originais x preto e branco dos avatares dos membros do grupo</h4>
+
+                <p style="text-align: center;">
+                    A seguir são mostrados os mesmos efeitos, mas feitos com nossos avatares
+                </p>
+
+                    <h5 style="text-align: center;">Original</h5>
+                    <img src='media/avatares.jpg' class="center" style="width:400px;height:400px;">
+                    <h5 style="text-align: center;">Preto e branco</h5>
+                    <img src='media/avatares_gray.jpg' class="center" style="width:400px;height:400px;">
+                    
+                <h4 style="text-align: center;">Imagens com resoluções alteradas dos avatares dos membros do grupo</h4>
+                    <h5 style="text-align: center;">5% de resolução</h5>
+                    <img src='media/avatares_peq.jpg' class="center" style="width:400px;height:400px;">
+                    <h5 style="text-align: center;">Original</h5>
+                    <img src='media/avatares.jpg' class="center" style="width:400px;height:400px;">
+                    <h5 style="text-align: center;">Dobro de resolução</h5>
+                    <img src='media/avatares_big.jpg' class="center" style="width:400px;height:400px;">
+                
+
+                <h4 style="text-align: center;">Vídeos lentos e rápidos com diferentes resoluções</h2>
+                    
+                    <h5 style="text-align: center;">Vídeos originais</h5>
+                    
+                    <video width="320" height="240" controls>
+                        <source src="media/video-lento.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <video width="320" height="240" controls>
+                        <source src="media/video-rapido.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+
+
+
+                    <p style="text-align: center;">
+                        Por algum motivo, os vídeos em resolução menor não aparecem no player. Eles estão disponibilizados nos links:
+                    </p>
+                    
+                    <a href="https://drive.google.com/file/d/1-FKIsZujfLjOPaR9Or790Xsl8_laSxTG/view?usp=sharing">
+                        <h4 style="text-align: center;">Vídeo lento em 50% de resolução</h4>
+                    </a>
+
+                    <a href="https://drive.google.com/file/d/1-Gtpf9zE-XpbMZfWHZQSFhs8O4nH446C/view?usp=sharing">
+                        <h4 style="text-align: center;">Vídeo lento em 25% de resolução</h4>
+                    </a>
+
+                    <a href="https://drive.google.com/file/d/1-GobuYljk63luZthh0SVonzkhBdBpdQJ/view?usp=sharing">
+                        <h4 style="text-align: center;">Vídeo rapido em 50% de resolução</h4>
+                    </a>
+
+                    <a href="https://drive.google.com/file/d/1-JZijb23MVkiBHudzCz8J1rXopAYegnN/view?usp=sharing">
+                        <h4 style="text-align: center;">Vídeo rapido em 25% de resolução</h4>
+                    </a>
+                    
+                
+        </article>
+    
+    </body>
+    
+</html>

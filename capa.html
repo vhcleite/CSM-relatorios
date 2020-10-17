@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+<meta charset="utf-8">
+<meta content="Sinais e Multimídia" name="title">
+<title>Sinais e Multimídia</title>
+</head>
+  
+<body>
+    <div class="container">
+        <div class="vertical-center">
+            <h1>IMPORTANTE: Se você não ouve nada, clique no play!</h1>
+            <p>Navegadores como o Google Chrome às vezes bloqueiam reprodução automática de áudio :(</p>
+        </div>
+
+        <audio controls>
+            <source src="capa/k.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+    </div>
+
+    <audio autoplay>
+        <source src="capa/k.mp3" type="audio/mp3" />
+    </audio>
+
+    <br class=”blank” />
+
+    <img SRC="capa/M.gif"><img>
+    <img SRC="capa/U.gif"><img>
+    <img SRC="capa/L.gif"><img>
+    <img SRC="capa/T.gif"><img>
+    <img SRC="capa/I.gif"><img>
+
+    <br class=”blank” />
+
+    <img SRC="capa/M.gif"><img>
+    <img SRC="capa/I.gif"><img>
+    <img SRC="capa/D.gif"><img>
+    <img SRC="capa/I.gif"><img>
+    <img SRC="capa/A.gif"><img>
+
+    <br class=”blank” />
+
+    <img src="capa/com_o_professor.png"><img>
+
+    <br class=”blank” />
+
+    <img src="capa/minami.png"><img>
+
+    <br class=”blank” />
+
+    <img src="capa/alunos.png"><img>
+
+    <h2>Clique em nossos nomes ou fotos para ver as páginas individuais!</h2>
+
+    <br class=”blank” />
+
+    <a href="jonas/index.html">
+        <img src="capa/jonas.jpg"><img>
+        <img src="capa/text_jonas.gif"><img>
+    </a>
+
+    <br class=”blank” />
+
+    <a href="renan/index.html">
+        <img src="capa/renan.jpg"><img>
+        <img src="capa/text_renan.gif"><img>
+    </a>
+
+    <br class=”blank” />
+    
+    <a href="victor/lab1_Victor_Leite.html">
+        <img src="capa/victor.jpg"><img>
+
+        <img src="capa/text_victor.gif"><img>
+    </a>
+
+    <br class=”blank” />
+
+    <a href="robson/robson.html">
+        <img src="capa/robson.jpg"><img>
+        <img src="capa/text_robson.gif"><img>
+    </a>
+
+    <br class=”blank” />
+
+    <img src="capa/projetos.png"><img>
+
+    <br class=”blank” />
+
+    <a href="LAB2/lab2.html">
+        <h1>Laboratódio 2 - Imagem e Captura de Vídeo</h1>
+    </a>
+
+    <a href="LAB3/lab3.html">
+        <h1>Laboratódio 3 - Codificação de Imagem por DCT e Animação</h1>
+    </a>
+
+    <br class=”blank” />
+
+
+<style>
+    .container {
+        height: 200px;
+        position: relative;
+        border: 3px solid blue;
+        background-color: red;
+    }
+    
+    .vertical-center {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+</style>
+
+<script>
+
+//Admitimos que esse script foi copiado do site:
+//https://www.kirupa.com/html5/creating_a_strobe_light_generator.htm 
+//Mas ao menos sabemos bem como ele funciona e vamos descreve-lo em comentários
+
+//Capturar o "corpo" da página para mudar o fundo depois
+var bodyElement = document.querySelector("body");
+
+
+//Temos dúvidas com essa variável/objeto, mas parece fazer transições mais suaves de cores, como visto na função changeColor
+var requestAnimationFrame = window.requestAnimationFrame || 
+                            window.mozRequestAnimationFrame || 
+                            window.webkitRequestAnimationFrame || 
+                            window.msRequestAnimationFrame;
+ 
+//Variável usada como "timer" para mudar a cor da tela, como visto na função abaixo:
+var delay = 0;
+ 
+//Incrementar o "timer" e se ele ultrapassar 10, mudar a cor da tela e zerar o timer
+function changeColor() {
+    delay++;
+     
+    if (delay > 10) {
+        bodyElement.style.backgroundColor = getRandomColor();
+        delay = 0;
+    }
+ 
+    requestAnimationFrame(changeColor);
+}
+
+//Chamada repetida infinitamente da função changeColor
+changeColor();           
+ 
+//Função geradora de códigos de cores aleatórias
+function getRandomColor() {
+    // criação de 3 números aleatórios entre 0 e 255
+    //Ou seja, um valor RGB aleatório
+    var r = Math.floor(Math.random()*256);
+    var g = Math.floor(Math.random()*256);
+    var b = Math.floor(Math.random()*256);
+     
+    // Conversão dos números para hexadecimal
+    var hexR = r.toString(16);
+    var hexG = g.toString(16);
+    var hexB = b.toString(16);
+     
+    // No código da cor, todos os números precisam de 2 dígitos
+    //Então um número 5, por exemplo, deve ser escrito como 05
+    if (hexR.length == 1) {
+        hexR = "0" + hexR;
+    }
+     
+    if (hexG.length == 1) {
+        hexG = "0" + hexG;
+    }
+ 
+    if (hexB.length == 1) {
+        hexB = "0" + hexB;
+    }
+ 
+    //Concatenar a string da cor aleatório e retornar o valor
+    var hexColor = "#" + hexR + hexG + hexB;
+    return hexColor.toUpperCase();
+}
+</script>
+</body>
+</html>

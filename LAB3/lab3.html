@@ -1,0 +1,145 @@
+<html>
+    <head>
+        <title>Relatorio 2</title>
+
+        <style>
+            .center {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+            }
+        </style>
+
+    </head>
+    <body>
+        <header style="text-align: center;">
+            <img src="media/ufabc_logo.png" style="width: 150px; height: 150px;">
+            <h2>UNIVERSIDADE FEDERAL DO ABC</h2>
+            <h2>RELATÓRIO 3 - CODIFICAÇÃO DE IMAGEM POR DCT E ANIMAÇÃO</h2>
+            <video width="320" height="240" controls>
+                <source src="media/animacao.mkv" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <section style="margin-top: 100px;">
+                <h3>Resumo em áudio:</h3>
+                <audio controls>
+                    <source src="media/audio-descricao.ogg" type="audio/ogg">
+                </audio>
+            </section>
+        </header>
+        
+        <article style="margin-top: 70px;">
+            <h3 style="text-align: center;">Procedimentos</h3>
+                <p style="text-align: center;">
+                    Nesta prática, foram feitas alterações simples em imagens utilizando a linguagem Python na ferramenta Google Colab. 
+                </p>
+                <p>
+                    Na primeira parte do laboratório foram explorados diferentes encodings de cores RGB, BGR, YCbCr e HSV. E também foi feito a divisão em camadas dos encodings RGB e YCbCr.
+                </p>
+                
+                <p>
+                    Na segunda parte do laboratório foi explorado a função de compressão do comando imwrite() ao salvar um formato JPEG escolhendo diferentes qualidades de imagens.
+                </p>
+                
+                <p>
+                    Na terceira parte do laboratório foi executado um experimento com a Transformada discreta cosseno onde foi calulado a matriz DCT da parte de uma imagem e zerada parte das compenentes da matriz para analizar a perda de informação da imagem. 
+                </p>
+
+                <p style="text-align: center;">
+                    Tudo isto foi feito utilizando as bibliotecas Matplotlib, Numpy e OpenCV.
+                </p>
+
+                <a href="https://colab.research.google.com/drive/1Eh7uEyhytVoX8dhOg_JNcNICrDSVBDnv#scrollTo=WsVWlgKhO4Ds">
+                    <h5 style="text-align: center;">Link para o Google Colab</h5>
+                </a>
+            
+            <h3 style="text-align: center;">Resultados - 01</h3>
+
+                <audio controls>
+                    <source src="media/parte01/WhatsApp Ptt 2020-10-17 at 18.30.33.ogg" type="audio/ogg">
+                </audio>
+                <h4 style="text-align: center;">Apresentação de encoding BGR vs RGB</h4>
+                <img src='media/parte01/BGR_RGB_Jonas.png' class="center">
+                <img src='media/parte01/BGR_RGB_Renan.png' class="center">
+                <img src='media/parte01/BGR_RGB_Robson.png' class="center">
+                <img src='media/parte01/BGR_RGB_Victor.png' class="center">    
+                <img src='media/parte01/BGR_RGB_grupo.png' class="center">
+                    
+                <audio controls>
+                    <source src="media/parte01/WhatsApp Ptt 2020-10-17 at 18.31.30.ogg" type="audio/ogg">
+                </audio>
+
+                <h4 style="text-align: center;">Imagens apresentadas com diferentes Encodings</h4>
+                    <img src='media/parte01/Encodings_Jonas.png' class="center">
+                    <img src='media/parte01/Encodings_Renan.png' class="center">
+                    <img src='media/parte01/Encodings_Robson.png' class="center">
+                    <img src='media/parte01/Encodings_Victor.png' class="center">
+                    <img src='media/parte01/Encodings_grupo.png' class="center">
+
+
+                <audio controls>
+                    <source src="media/parte01/WhatsApp Ptt 2020-10-17 at 18.32.16.ogg" type="audio/ogg">
+                </audio>
+
+                <h4 style="text-align: center;">Imagens RGB separadas por camadas</h4>
+
+                    <img src='media/parte01/RGB_Camadas_Jonas.png' class="center">
+                    <img src='media/parte01/RGB_Camadas_Renan.png' class="center">
+                    <img src='media/parte01/RGB_Camadas_Robson.png' class="center">
+                    <img src='media/parte01/RGB_Camadas_Victor.png' class="center">
+                    <img src='media/parte01/RGB_Camadas_grupo.png' class="center">
+                    
+                <audio controls>
+                    <source src="media/parte01/WhatsApp Ptt 2020-10-17 at 18.32.36.ogg" type="audio/ogg">
+                </audio>
+
+                <h4 style="text-align: center;">Imagens YCrCb separadas por camadas</h4>
+                    <img src='media/parte01/YCrCb_camadas_Jonas.png' class="center">
+                    <img src='media/parte01/YCrCb_camadas_Renan.png' class="center">
+                    <img src='media/parte01/YCrCb_camadas_Robson.png' class="center">
+                    <img src='media/parte01/YCrCb_camadas_Victor.png' class="center">
+                    <img src='media/parte01/YCrCb_camadas_grupo.png' class="center">
+
+            <h3 style="text-align: center;">Resultados - 02</h3>
+                
+            <audio controls>
+                <source src="media/parte02/WhatsApp Ptt 2020-10-17 at 18.34.13.ogg" type="audio/ogg">
+            </audio>
+            <h4 style="text-align: center;">Diferentes fatores de qualidade para formato JPEG</h4>
+                    <img src='media/parte02/jpeg_resolucao_jonas.png' class="center">
+                    <img src='media/parte02/jpeg_resolucao_renan.png' class="center">
+                    <img src='media/parte02/jpeg_resolucao_robson.png' class="center">
+                    <img src='media/parte02/jpeg_resolucao_victor.png' class="center">
+                    <img src='media/parte02/jpeg_resolucao_grupo.png' class="center">
+
+                    <audio controls>
+                        <source src="media/parte02/WhatsApp Ptt 2020-10-17 at 18.34.47.ogg" type="audio/ogg">
+                    </audio>
+
+                    <audio controls>
+                        <source src="media/parte02/WhatsApp Ptt 2020-10-17 at 18.35.35.ogg" type="audio/ogg">
+                    </audio>
+
+                    <img src='media/parte02/tabela_informacoes.png' class="center">
+
+            <h3 style="text-align: center;">Resultados - 03</h3>
+
+                <audio controls>
+                    <source src="media/parte03/WhatsApp Ptt 2020-10-17 at 18.36.22.ogg" type="audio/ogg">
+                </audio>
+
+                <h4 style="text-align: center;">Matriz DCT com frequências altas zeradas.</h4>
+                    <img src='media/parte03/zero_diagonais_01.png' class="center">
+                <h4 style="text-align: center;">Matriz DCT com frequências altas zeradas e duas diagonais de frequências baixas.</h4>
+                    <img src='media/parte03/zero_diagonais_02.png' class="center">
+                
+                    <audio controls>
+                        <source src="media/parte03/WhatsApp Ptt 2020-10-17 at 18.37.06.ogg" type="audio/ogg">
+                    </audio>
+                
+                    <h4 style="text-align: center;">Comparação de bloco de imagem original com imagem de freqûencias altas zeradas e imagem de frequências altas mais duas diagonais de frequências baixas.</h4>
+                    <img src='media/parte03/CDT.png' class="center">
+        </article>
+    </body>
+</html>
