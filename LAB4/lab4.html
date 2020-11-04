@@ -1,0 +1,171 @@
+<html>
+    <head>
+        <title>Relatorio 4</title>
+
+        <style>
+            .center {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+            }
+        </style>
+
+    </head>
+    <body>
+        <header style="text-align: center;">
+            <img src="media/ufabc_logo.png" style="width: 150px; height: 150px;">
+            <h2>UNIVERSIDADE FEDERAL DO ABC</h2>
+            <h2>RELATÓRIO 4 - Codificação de Imagem com DWT</h2>
+            
+            <section style="margin-top: 100px;">
+                <h3>Resumo em áudio:</h3>
+                <audio controls>
+                    <source src="media/audio-descricao.ogg" type="audio/ogg">
+                </audio>
+            </section>
+        </header>
+        
+        <article style="margin-top: 70px;">
+            <h3 style="text-align: center;">Procedimentos</h3>
+                <p style="text-align: center;">
+                    Nesta prática, foram feitas alterações simples em imagens utilizando a linguagem Python na ferramenta Google Colab. 
+                </p>
+                <p>
+                    Na primeira parte do laboratório foram obtidas as compenentes de uma imagem (aproximação, bordas horizontais, bordas verticais e bordas diagonais) por meio da transformada de Haar.
+                </p>
+                
+                <p>
+                    Na segunda parte do laboratório foram reconstruidas as imagens em preto em branco utilizando a transformada inversa de Haar. Foi calculado a MSE e PSNR_Y de cada imagem recosntruida em comparação com a original.
+                </p>
+                
+                <p>
+                    Na terceira parte do laboratório as imagens foram codificadas em dois níveis de DWT para fins de comparação com imagem original e imagem de codificação de DWT em um nível. 
+                </p>
+
+                <p>
+                    Na quarta parte do laboratório foi feita a separação da imagem nos planos de cores vermelho, verde e azul. Para cada plano foi feita a transformada de Haar e mostradas as imagens resultantes da transformada. 
+                </p>
+
+                <p>
+                    Na quinta parte do laboratório foram reconstruídas duas imagens. A primeira é a imaigem original a partir do planos de cores que haviam sido separados e a segunda a reconstrução a partir da compenente de aproximação da DWT. Foram calculados o MSE e PSNR das reconstruções.
+                </p>
+
+                <p>
+                    Na sexta parte do laboratório foi pego uma imagem e separada em suas componentes YCrCb. Para cada uma das componentes foi calculada a DWT, pego a sua aproximação e convertido novamente para RGB.
+                </p>
+
+                <p style="text-align: center;">
+                    Tudo isto foi feito utilizando as bibliotecas Matplotlib, Numpy e OpenCV.
+                </p>
+
+                <a href="https://colab.research.google.com/drive/1Eh7uEyhytVoX8dhOg_JNcNICrDSVBDnv#scrollTo=WsVWlgKhO4Ds">
+                    <h5 style="text-align: center;">Link para o Google Colab</h5>
+                </a>
+            
+            <h3 style="text-align: center;">Resultados - 01</h3>
+
+            <h4 style="text-align: center;">Codificação de Luminância (P&B) com DWT para as fotos dos membros do grupo</h4>
+                <audio controls>
+                    <source src="media/parte01/WhatsApp Ptt 2020-11-03 at 22.04.50.ogg" type="audio/ogg">
+                </audio>
+                <img src='media/parte01/parte01grupo.png' class="center">
+                <img src='media/parte01/parte01jonas.png' class="center">
+                <img src='media/parte01/parte01renan.png' class="center">
+                <img src='media/parte01/parte01robson.png' class="center">    
+                <img src='media/parte01/parte01victor.png' class="center">
+
+                <p>
+                    Acima temos a codificação em DWT das imagens em Preto e Branco que tem como resultado a separação em componentes de Aproximação, Verticais, Horizontais e Diagonais, respectivamente para cada imagem dos membros do grupo. Observa-se que as componentes Diagonais tem menor presença no plot, pois esta é a componente que carrega a informação das frequências mais altas da imagem.
+                </p>
+
+                <h4 style="text-align: center;">Reconstrução de imagem a partir de aproximação da DWT</h4>
+                <audio controls>
+                    <source src="media/parte01/WhatsApp Ptt 2020-11-03 at 22.33.12.ogg" type="audio/ogg">
+                </audio>
+                <img src='media/parte01/rec_jonas.png' class="center">
+                <img src='media/parte01/rec_renan.png' class="center">
+                <img src='media/parte01/rec_robson.png' class="center">
+                <img src='media/parte01/rec_victor.png' class="center">
+                <img src='media/parte01/rec_grupo.png' class="center">
+
+                <p>
+                    Acima foi feita a reconstrução das imagens em tons de cinza à partir da codificação em DWT feita anteriormente. Além disso, foram calculadas o MSE (Erro Quadrático Médio) para cada imagem. Observa-se que o erro das imagens reconstruídas em P&B é da ordem de  10−24  e a PSNR em torno de 280 dB.
+                </p>
+
+            <h3 style="text-align: center;">Resultados - 02</h3>
+
+            <h4 style="text-align: center;">Teste das Funções de Multiresolução wavedec2() e waverec2()</h4>
+                <audio controls>
+                    <source src="media/parte02/WhatsApp Ptt 2020-11-03 at 22.58.40.ogg" type="audio/ogg">
+                </audio>
+                <img src='media/parte02/nivel02_jonas.png' class="center">
+                <img src='media/parte02/nivel02_renan.png' class="center">
+                <img src='media/parte02/nivel02_robson.png' class="center">
+                <img src='media/parte02/nivel02_victor.png' class="center">
+                <img src='media/parte02/nivel02_grupo.png' class="center">
+
+                <p>
+                    Aqui temos a codificação em dois níveis de DWT. Observa-se que no segundo nível das componentes, os detalhes são realçados em cada uma, evideenciando a filtragem dupla aplicada na DWT de dois níveis. É importante destacar, que a componente de aproximação, mesmo sendo filtrada duas vezes, ainda preserva, em boa parte, as caracteríticas da imagem original.
+                </p>
+
+            <h3 style="text-align: center;">Resultados - 03</h3>
+
+            <h4 style="text-align: center;">Reconstrução de Imagem Colorida</h4>
+
+                <img src='media/parte03/red_jonas.png' class="center">
+                <img src='media/parte03/rec_red_jonas.png' class="center">
+                <img src='media/parte03/red_renan.png' class="center">
+                <img src='media/parte03/rec_red_renan.png' class="center">
+                <img src='media/parte03/red_robson.png' class="center">
+                <img src='media/parte03/rec_red_robson.png' class="center">
+                <img src='media/parte03/red_victor.png' class="center">
+                <img src='media/parte03/rec_red_victor.png' class="center">
+                <img src='media/parte03/red_grupo.png' class="center">
+                <img src='media/parte03/rec_red_grupo.png' class="center">
+
+
+                <img src='media/parte03/green_jonas.png' class="center">
+                <img src='media/parte03/rec_green_jonas.png' class="center">
+                <img src='media/parte03/green_renan.png' class="center">
+                <img src='media/parte03/rec_green_renan.png' class="center">
+                <img src='media/parte03/green_robson.png' class="center">
+                <img src='media/parte03/rec_green_robson.png' class="center">
+                <img src='media/parte03/green_victor.png' class="center">
+                <img src='media/parte03/rec_green_victor.png' class="center">
+                <img src='media/parte03/green_grupo.png' class="center">
+                <img src='media/parte03/rec_green_grupo.png' class="center">
+
+
+                <img src='media/parte03/blue_jonas.png' class="center">
+                <img src='media/parte03/rec_blue_jonas.png' class="center">
+                <img src='media/parte03/blue_renan.png' class="center">
+                <img src='media/parte03/rec_blue_renan.png' class="center">
+                <img src='media/parte03/blue_robson.png' class="center">
+                <img src='media/parte03/rec_blue_robson.png' class="center">
+                <img src='media/parte03/blue_victor.png' class="center">
+                <img src='media/parte03/rec_blue_victor.png' class="center">
+                <img src='media/parte03/blue_grupo.png' class="center">
+                <img src='media/parte03/rec_blue_grupo.png' class="center">
+
+
+                <img src='media/parte03/rec_jonas.png' class="center">
+                <img src='media/parte03/rec_renan.png' class="center">
+                <img src='media/parte03/rec_robson.png' class="center">
+                <img src='media/parte03/rec_victor.png' class="center">
+                <img src='media/parte03/rec_grupo.png' class="center">
+
+                <p>
+                    Acima, foram feitas as reconstruções coloridas das fotos à partir das DWTs das componentes RGB separadas. Observa-se um erro quadrático médio da ordem de  10−2  e uma PSNR de 60 dB. Comparando com as reconstruções em P&B, é evidente um erro maior. Entretanto, de forma qualitativa, a reconstrução ainda é muito próxima à imagem original, conforme célula acima.
+                </p>
+
+                <h4 style="text-align: center;">Compressão YCrCb</h4>
+
+                <img src='media/parte04/dwt_ycrcb.png' class="center">
+                <img src='media/parte04/tabela.png' class="center">
+
+                <p>Acima temos a tabela que demonstra o tamanho de cada imagem (KB), o tamanho da imagem comprimida em DWT (KB), e a taxa de compressão(%). Observa-se que para maioria das imagens a compressão não foi teve um ganho expressivo ou até mesmo aumentou o tamanho da imagem em KB. Uma possível explicação para o aumento do tamanho, pode ser o fato das imagens já estarem comprimidas por outro algoritmo, pois foram compartilhadas através do aplicativo Whatsapp. Destaca-se a imagem do Victor, a qual não foi compartilhada pelo Whatsapp, alcançando compressões de 47,8% e 12,0% para DWT 1 e 2, respectivamente, de luminância.</p>
+                    
+        </article>
+    </body>
+</html>
