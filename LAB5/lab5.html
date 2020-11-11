@@ -1,0 +1,211 @@
+<html>
+    <head>
+        <title>Relatorio 5</title>
+
+        <style>
+            .center {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+            }
+        </style>
+
+        <style>
+            table, td, th, tfoot {border:solid 1px #000; padding:5px; margin-left:auto; margin-right:auto; font-size: x-large;}
+            th {background-color:#999;}
+            caption {font-size:x-large;}
+            colgroup {background:#F60;}
+            .coluna1 {background:#F66;}
+            .coluna2  {background:#F33;}
+            .coluna3  {background:#F99;} 
+        </style>
+
+    </head>
+    <body>
+        <header style="text-align: center;">
+            <img src="media/ufabc_logo.png" style="width: 150px; height: 150px;">
+            <h2>UNIVERSIDADE FEDERAL DO ABC</h2>
+            <h2>RELATÓRIO 5 - Percepção Auditiva</h2>
+            
+            <section style="margin-top: 100px;">
+                <h3>Resumo em áudio:</h3>
+                <audio controls>
+                    <source src="" type="audio/ogg">
+                </audio>
+                <audio controls>
+                    <source src="" type="audio/ogg">
+                </audio>
+                <audio controls>
+                    <source src="" type="audio/ogg">
+                </audio>
+                <audio controls>
+                    <source src="" type="audio/ogg">
+                </audio>
+                <audio controls>
+                    <source src="" type="audio/ogg">
+                </audio>
+            </section>
+        </header>
+        
+        <article style="margin-top: 70px;">
+            <h3 style="text-align: center;">Procedimentos</h3>
+                <p style="text-align: center;">
+                    Nesta prática, foram realizados testes de audiometria e faixa audível por cada um dos integrantes do grupo, bem como um teste de mascaramento de tons
+                    harmônicos em diferentes faixas de frequência. 
+                </p>
+                <p>
+                    Na primeira parte do laboratório, realizou-se o teste de audiometria por meio do site <a href="https://hearingtest.online/"><i>Online
+                    Hearing Test and Audiogram Printout</i></a> obtendo-se o audiograma de cada um dos integrantes do grupo, em dois testes distintos:
+                    pela caixa de som do <i>desktop</i> ou <i>notebook</i> e pelo fone de ouvido.
+                </p>
+                
+                <p>
+                    Na segunda parte do laboratório foi realizado um teste de faixa audível por meio do vídeo do YouTube <a href="https://www.youtube.com/watch?v=H-iCZElJ8m0">
+                    <i>Hearing Test</i></a>, obtendo-se as frequências mínima e máxima audíveis por cada um dos integrantes do grupo, através de três testes dinstintos: pela caixa de
+                    som do <i>desktop</i> ou <i>notebook</i>, fone de ouvido e pelo celular. 
+                </p>
+
+                <p>
+                    Na terceira parte do laboratório foi feito o teste de mascaramento de tons harmônicos por cada um dos integrantes do grupo, em pares de frequências
+                    [f1, f2] = [1200Hz, 2000Hz], [600Hz, 1000Hz] e [2400Hz, 4000Hz], anotando-se o limiar de atenuação onde uma frequência encobre a outra.
+                </p>
+
+                <p style="text-align: center;">
+                    Tudo isto foi feito utilizando as bibliotecas Matplotlib, Numpy, math e IPython.
+                </p>
+                
+                <!-- Acham necessário criar um colab para este laboratório já que há mínimas mudanças com relação ao original? APAGAR ESTE COMENTÁRIO ANTES DO COMMIT! -->
+                <a href="">
+                    <h5 style="text-align: center;">Link para o Google Colab</h5>
+                </a>
+            
+            <h3 style="text-align: center; padding-top: 2cm;">Resultados - 01</h3>
+
+            <h4 style="text-align: center;">Teste de Audiometria</h4>
+                
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="media/" type="audio/ogg">
+                    </audio>
+                </div>
+
+                <div style="text-align: center; padding-top: 1cm;">
+                    <object data="media/audiograma_robson_caixa.pdf" height="800" width="600"></object>
+                    <object data="media/audiograma_robson_fone.pdf" height="800" width="600"></object>
+
+
+                    
+                </div>
+
+                <p>
+                    Os arquivos acima foram gerados através do teste de audiometria do link presente no resumo desta página, através de dois testes distintos: primeiro pela caixa de som,
+                    e depois com fones de ouvido. Pode-se notar uma diferença significativa entre a amplitude necessária para que um tom seja audível, podendo ser explicado pelo fato do
+                    fone de ouvido providenciar certo isolamento acústico ao usuário, além da fonte sonora estar mais próxima do canal auditivo.
+                </p>
+
+
+            <h3 style="text-align: center; padding-top: 2cm;">Resultados - 02</h3>
+
+            <h4 style="text-align: center;">Teste de Faixa Audível</h4>
+                
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="media/" type="audio/ogg">
+                    </audio>
+                </div>
+                
+                <div style="text-align: center; padding-top: 1cm;">
+                    <table>
+                        <tr>
+                            <th>Integrante</th>
+                            <th>f<sub>aMIN</sub> [caixa]</th>
+                            <th>f<sub>aMAX</sub> [caixa]</th>
+                            <th>f<sub>aMIN</sub> [fone]</th>
+                            <th>f<sub>aMAX</sub> [fone]</th>
+                            <th>f<sub>aMIN</sub> [celular]</th>
+                            <th>f<sub>aMAX</sub> [celular]</th>
+                        </tr>
+                        <tr>
+                            <td>Jonas</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Renan</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Robson</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Victor</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <p>
+                    A tabela acima resume as informações pertinentes à parte 02 deste laboratório: as frequências f<sub>aMIN</sub> e f<sub>aMAX</sub> audíveis para cada um dos integrantes do grupo.
+                </p>
+
+            <h3 style="text-align: center;">Resultados - 03</h3>
+
+            <h4 style="text-align: center;">Reconstrução de Imagem Colorida</h4>
+                
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="media/" type="audio/ogg">
+                    </audio>
+                </div>
+
+                
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="media/" type="audio/ogg">
+                    </audio>
+                </div>
+
+
+                <p>
+                    Acima, foram feitas as reconstruções coloridas das fotos à partir das DWTs das componentes RGB separadas. Observa-se um erro quadrático médio da ordem de  10−2  e uma PSNR de 60 dB. Comparando com as reconstruções em P&B, é evidente um erro maior. Entretanto, de forma qualitativa, a reconstrução ainda é muito próxima à imagem original, conforme célula acima.
+                </p>
+
+                <h4 style="text-align: center;">Compressão YCrCb</h4>
+                <audio controls>
+                    <source src="media/parte04/WhatsApp Ptt 2020-11-04 at 22.39.34.ogg" type="audio/ogg">
+                </audio>
+
+                <img src='media/parte04/dwt_ycrcb.png' class="center">
+
+                <audio controls>
+                    <source src="media/parte04/WhatsApp Ptt 2020-11-04 at 22.42.16.ogg" type="audio/ogg">
+                </audio>
+                
+                <img src='media/parte04/tabela.png' class="center">
+
+                <p>Acima temos a tabela que demonstra o tamanho de cada imagem (KB), o tamanho da imagem comprimida em DWT (KB), e a taxa de compressão(%). Observa-se que para maioria das imagens a compressão não foi teve um ganho expressivo ou até mesmo aumentou o tamanho da imagem em KB. Uma possível explicação para o aumento do tamanho, pode ser o fato das imagens já estarem comprimidas por outro algoritmo, pois foram compartilhadas através do aplicativo Whatsapp. Destaca-se a imagem do Victor, a qual não foi compartilhada pelo Whatsapp, alcançando compressões de 47,8% e 12,0% para DWT 1 e 2, respectivamente, de luminância.</p>
+                    
+        </article>
+    </body>
+</html>
