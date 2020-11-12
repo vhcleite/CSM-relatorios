@@ -90,12 +90,28 @@
                     </audio>
                 </div>
 
-                <div style="text-align: center; padding-top: 1cm;">
-                    <object data="media/audiograma_robson_caixa.pdf" height="800" width="600"></object>
-                    <object data="media/audiograma_robson_fone.pdf" height="800" width="600"></object>
+                <h4 style="text-align: center;">Jonas</h4>
+                <div style="text-align: center; padding-bottom: 1cm;">
+                    <object data="media/audiometria_jonas_caixa.pdf" height="800" width="600"></object>
+                    <object data="media/audiometria_jonas_fone.pdf" height="800" width="600"></object>
+                </div>
 
+                <h4 style="text-align: center;">Renan</h4>
+                <div style="text-align: center; padding-bottom: 1cm;">
+                    <object data="media/audiometria_renan_caixa.pdf" height="800" width="600"></object>
+                    <object data="media/audiometria_renan_fone.pdf" height="800" width="600"></object>
+                </div>
 
-                    
+                <h4 style="text-align: center;">Robson</h4>
+                <div style="text-align: center; padding-bottom: 1cm;">
+                    <object data="media/audiometria_robson_caixa.pdf" height="800" width="600"></object>
+                    <object data="media/audiometria_robson_fone.pdf" height="800" width="600"></object>
+                </div>
+
+                <h4 style="text-align: center;">Victor</h4>
+                <div style="text-align: center; padding-bottom: 1cm;">
+                    <object data="media/audiometria_victor_caixa.pdf" height="800" width="600"></object>
+                    <object data="media/audiometria_victor_fone.pdf" height="800" width="600"></object>
                 </div>
 
                 <p>
@@ -121,10 +137,16 @@
                             <th>Integrante</th>
                             <th>f<sub>aMIN</sub> [caixa]</th>
                             <th>f<sub>aMAX</sub> [caixa]</th>
+                            <th>f<sub>mais</sub> audível</th>
+                            <th>f<sub>menos</sub> audível</th>
                             <th>f<sub>aMIN</sub> [fone]</th>
                             <th>f<sub>aMAX</sub> [fone]</th>
+                            <th>f<sub>mais</sub> audível</th>
+                            <th>f<sub>menos</sub> audível</th>
                             <th>f<sub>aMIN</sub> [celular]</th>
                             <th>f<sub>aMAX</sub> [celular]</th>
+                            <th>f<sub>mais</sub> audível</th>
+                            <th>f<sub>menos</sub> audível</th>
                         </tr>
                         <tr>
                             <td>Jonas</td>
@@ -134,27 +156,51 @@
                             <td></td>
                             <td></td>
                             <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                         <tr>
                             <td>Renan</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>20</td>
+                            <td>19842</td>
+                            <td>32</td>
+                            <td>9182</td>
+                            <td>24</td>
+                            <td>18200</td>
+                            <td>24</td>
+                            <td>8979</td>
+                            <td>25</td>
+                            <td>18816</td>
+                            <td>25</td>
+                            <td>6520</td>
                         </tr>
                         <tr>
                             <td>Robson</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>202</td>
+                            <td>16900</td>
+                            <td>250</td>
+                            <td>10102</td>
+                            <td>45</td>
+                            <td>10500</td>
+                            <td>50</td>
+                            <td>10051</td>
+                            <td>31</td>
+                            <td>16600</td>
+                            <td>32</td>
+                            <td>10080</td>
                         </tr>
                         <tr>
                             <td>Victor</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -171,7 +217,7 @@
 
             <h3 style="text-align: center;">Resultados - 03</h3>
 
-            <h4 style="text-align: center;">Reconstrução de Imagem Colorida</h4>
+            <h4 style="text-align: center;">Teste de Mascaramento de Tons Harmônicos</h4>
                 
                 <div style="text-align: center;">
                     <audio controls>
@@ -179,33 +225,148 @@
                     </audio>
                 </div>
 
-                
-                <div style="text-align: center;">
-                    <audio controls>
-                        <source src="media/" type="audio/ogg">
-                    </audio>
+                <div style="text-align: center; padding-top: 1cm;">
+                    <table>
+                        <tr>
+                            <th>Integrante</th>
+                            <th>Tom encobridor</th>
+                            <th>Tom mascarado</th>
+                            <th>Fator de Atenuação</th>
+                        </tr>
+
+                        <tr>
+                            <td rowspan="6">Jonas</td>
+                            <td>2000</td>
+                            <td>1200</td>
+                            <td>-12</td>
+                        </tr>
+                        <tr>
+                            <td>1200</td>
+                            <td>2000</td>
+                            <td>-15</td>
+                        </tr>
+                        <tr>
+                            <td>600</td>
+                            <td>1000</td>
+                            <td>-15</td>
+                        </tr>
+                        <tr>
+                            <td>1000</td>
+                            <td>600</td>
+                            <td>-12</td>
+                        </tr>
+                        <tr>
+                            <td>2400</td>
+                            <td>4000</td>
+                            <td>-15</td>
+                        </tr>
+                        <tr>
+                            <td>4000</td>
+                            <td>2400</td>
+                            <td>-12</td>
+                        </tr>
+
+                        <tr>
+                            <td rowspan="6">Renan</td>
+                            <td>2000</td>
+                            <td>1200</td>
+                            <td>-15</td>
+                        </tr>
+                        <tr>
+                            <td>1200</td>
+                            <td>2000</td>
+                            <td>-15</td>
+                        </tr>
+                        <tr>
+                            <td>600</td>
+                            <td>1000</td>
+                            <td>-15</td>
+                        </tr>
+                        <tr>
+                            <td>1000</td>
+                            <td>600</td>
+                            <td>-12</td>
+                        </tr>
+                        <tr>
+                            <td>2400</td>
+                            <td>4000</td>
+                            <td>-15</td>
+                        </tr>
+                        <tr>
+                            <td>4000</td>
+                            <td>2400</td>
+                            <td>-15</td>
+                        </tr>
+
+                        <tr>
+                            <td rowspan="6">Robson</td>
+                            <td>2000</td>
+                            <td>1200</td>
+                            <td>-12</td>
+                        </tr>
+                        <tr>
+                            <td>1200</td>
+                            <td>2000</td>
+                            <td>-15</td>
+                        </tr>
+                        <tr>
+                            <td>600</td>
+                            <td>1000</td>
+                            <td>-15</td>
+                        </tr>
+                        <tr>
+                            <td>1000</td>
+                            <td>600</td>
+                            <td>-12</td>
+                        </tr>
+                        <tr>
+                            <td>2400</td>
+                            <td>4000</td>
+                            <td>-15</td>
+                        </tr>
+                        <tr>
+                            <td>4000</td>
+                            <td>2400</td>
+                            <td>-12</td>
+                        </tr>
+
+                        <tr>
+                            <td rowspan="6">Victor</td>
+                            <td>2000</td>
+                            <td>1200</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>1200</td>
+                            <td>2000</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>600</td>
+                            <td>1000</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>1000</td>
+                            <td>600</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2400</td>
+                            <td>4000</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>4000</td>
+                            <td>2400</td>
+                            <td></td>
+                        </tr>
+                    </table>
                 </div>
-
-
+                
                 <p>
-                    Acima, foram feitas as reconstruções coloridas das fotos à partir das DWTs das componentes RGB separadas. Observa-se um erro quadrático médio da ordem de  10−2  e uma PSNR de 60 dB. Comparando com as reconstruções em P&B, é evidente um erro maior. Entretanto, de forma qualitativa, a reconstrução ainda é muito próxima à imagem original, conforme célula acima.
+                    CONCLUSÃO E DISCUSSÃO PARTE 3
                 </p>
-
-                <h4 style="text-align: center;">Compressão YCrCb</h4>
-                <audio controls>
-                    <source src="media/parte04/WhatsApp Ptt 2020-11-04 at 22.39.34.ogg" type="audio/ogg">
-                </audio>
-
-                <img src='media/parte04/dwt_ycrcb.png' class="center">
-
-                <audio controls>
-                    <source src="media/parte04/WhatsApp Ptt 2020-11-04 at 22.42.16.ogg" type="audio/ogg">
-                </audio>
-                
-                <img src='media/parte04/tabela.png' class="center">
-
-                <p>Acima temos a tabela que demonstra o tamanho de cada imagem (KB), o tamanho da imagem comprimida em DWT (KB), e a taxa de compressão(%). Observa-se que para maioria das imagens a compressão não foi teve um ganho expressivo ou até mesmo aumentou o tamanho da imagem em KB. Uma possível explicação para o aumento do tamanho, pode ser o fato das imagens já estarem comprimidas por outro algoritmo, pois foram compartilhadas através do aplicativo Whatsapp. Destaca-se a imagem do Victor, a qual não foi compartilhada pelo Whatsapp, alcançando compressões de 47,8% e 12,0% para DWT 1 e 2, respectivamente, de luminância.</p>
-                    
         </article>
     </body>
 </html>
