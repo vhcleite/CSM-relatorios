@@ -1,0 +1,541 @@
+<html>
+    <head>
+        <title>Relatorio 6</title>
+
+        <style>
+            .center {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+            }
+        </style>
+
+        <style>
+            table, td, th, tfoot {border:solid 1px #000; padding:5px; margin-left:auto; margin-right:auto; font-size: x-large;}
+            th {background-color:#999;}
+            caption {font-size:x-large;}
+            colgroup {background:#F60;}
+            .coluna1 {background:#F66;}
+            .coluna2  {background:#F33;}
+            .coluna3  {background:#F99;} 
+        </style>
+
+    </head>
+    <body>
+        <header style="text-align: center;">
+            <img src="media/ufabc_logo.png" style="width: 150px; height: 150px;">
+            <h2>UNIVERSIDADE FEDERAL DO ABC</h2>
+            <h2>RELATÓRIO 6 - PDS da Voz</h2>
+            
+            <section style="margin-top: 100px;">
+                <h3>Resumo em áudio:</h3>
+                <audio controls>
+                    <source src="media/resumo.ogg" type="audio/ogg">
+                </audio>
+            </section>
+        </header>
+        
+        <article style="margin-top: 70px;">
+            <h3 style="text-align: center;">Procedimentos</h3>
+                <p style="text-align: center;">
+                    Nesta prática, foram gravados, por cada integrante do grupo, áudios com conteúdos diversos, como dígitos, números gerais, texto lido e poema. Os principais objetivos consistiam
+                    em estudar a leitura dos arquivos de áudio, janelamento, cálculo de Energia de Tempo Curto, cálculo de Espectrogramas, determinação do Pitch, da frequência fundamental f<sub>0</sub> e
+                    das formantes (f<sub>1</sub> a f<sub>4</sub>) de algumas vogais e determinação de fonemas surdos, sonoros, consoantes gerais e plosivos.
+                </p>
+                <p style="text-align: center;">
+                    Na primeira parte do laboratório, gravou-se áudios com conteúdos diversos. Posteriormente, realizou-se as leituras dos mesmos dentro do ambiente do Google Colab através do IPython.
+                </p>
+                <p style="text-align: center;">
+                    Na segunda parte do laboratório, levantou-se os parâmetros de análise, como frequência de amostragem, e definição dos parâmetros para janelamento. 
+                </p>
+                <p style="text-align: center;">
+                    Na terceira parte do laboratório calculou-se a Energia de Tempo Curto dos áudios gravados.
+                </p>
+                <p style="text-align: center;">
+                    Na quarta parte do laboratório, foi realizado o levantamento dos Espectrogramas dos arquivos de áudio, através da biblioteca Librosa.
+                </p>
+                <p style="text-align: center;">
+                    Na quinta parte do laboratório determinou-se o Pitch e a frequência fundamental f<sub>0</sub> dos áudios, bem como suas formantes.
+                </p>
+                <p style="text-align: center;">
+                    Já na etapa final, foi realizada a determinação de algumas consoantes e plosivos.
+                </p>
+                <p style="text-align: center;">
+                    Tudo isto foi feito utilizando as bibliotecas Matplotlib, Numpy, Librosa e IPython.
+                </p>
+            
+            <h3 style="text-align: center; padding-top: 1cm;">Resultados - 01</h3>
+
+            <h4 style="text-align: center;">Arquivos gravados</h4>
+                
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="media/parte 1.ogg" type="audio/ogg">
+                    </audio>
+                </div>
+
+                <p style="text-align: center;">
+                    A seguir são mostrados os gravados pelos integrantes do grupo para este experimento.
+                </p>
+                
+                <h4 style="text-align: center;">Jonas</h4>
+                <div style="text-align: center; padding-bottom: 1cm;">
+
+                </div>
+
+                <h4 style="text-align: center;">Renan</h4>
+                <div style="text-align: center; padding-bottom: 1cm;">
+
+                </div>
+
+                <h4 style="text-align: center;">Robson</h4>
+                <div style="text-align: center; padding-bottom: 1cm;">
+                    <audio controls>
+                        <source src="media/robson/audios/RA11033615.wav" type="audio/wav">
+                    </audio>
+                    <audio controls>
+                        <source src="media/robson/audios/RA11033615_pares.wav" type="audio/wav">
+                    </audio>
+                    <audio controls>
+                        <source src="media/robson/audios/Burrinho_RobsonSantiago.wav" type="audio/wav">
+                    </audio>
+                    <audio controls>
+                        <source src="media/robson/audios/Camoes_RobsonSantiago.wav" type="audio/wav">
+                    </audio>
+                </div>
+
+                <h4 style="text-align: center;">Victor</h4>
+                <div style="text-align: center; padding-bottom: 1cm;">
+
+                </div>
+
+
+
+
+
+
+                
+            <h3 style="text-align: center; padding-top: 2cm;">Resultados - 02</h3>
+
+            <h4 style="text-align: center;">Teste de Faixa Audível</h4>
+                
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="media/parte 2.ogg" type="audio/ogg">
+                    </audio>
+                </div>
+
+                <p style="text-align: center;">
+                    A tabela acima resume as informações pertinentes à parte 02 deste laboratório: as frequências f<sub>aMIN</sub> e f<sub>aMAX</sub> audíveis para cada um dos integrantes do grupo.
+                </p>
+                
+                <div style="text-align: center; padding-top: 1cm;">
+                    <table>
+                        <tr>
+                            <th>Integrante</th>
+                            <th>f<sub>aMIN</sub> [caixa]</th>
+                            <th>f<sub>aMAX</sub> [caixa]</th>
+                            <th>f<sub>menos</sub> audível</th>
+                            <th>f<sub>mais</sub> audível</th>
+                            <th>f<sub>aMIN</sub> [fone]</th>
+                            <th>f<sub>aMAX</sub> [fone]</th>
+                            <th>f<sub>menos</sub> audível</th>
+                            <th>f<sub>mais</sub> audível</th>
+                            <th>f<sub>aMIN</sub> [celular]</th>
+                            <th>f<sub>aMAX</sub> [celular]</th>
+                            <th>f<sub>menos</sub> audível</th>
+                            <th>f<sub>mais</sub> audível</th>
+                        </tr>
+                        <tr>
+                            <td>Jonas</td>
+                            <td>115</td>
+                            <td>18000</td>
+                            <td>5000</td>
+                            <td>13000</td>
+                            <td>52</td>
+                            <td>18500</td>
+                            <td>12000</td>
+                            <td>6500</td>
+                            <td>55</td>
+                            <td>15000</td>
+                            <td>10000</td>
+                            <td>4500</td>
+                        </tr>
+                        <tr>
+                            <td>Renan</td>
+                            <td>20</td>
+                            <td>19842</td>
+                            <td>32</td>
+                            <td>9182</td>
+                            <td>24</td>
+                            <td>18200</td>
+                            <td>24</td>
+                            <td>8979</td>
+                            <td>25</td>
+                            <td>18816</td>
+                            <td>25</td>
+                            <td>6520</td>
+                        </tr>
+                        <tr>
+                            <td>Robson</td>
+                            <td>202</td>
+                            <td>16900</td>
+                            <td>250</td>
+                            <td>10102</td>
+                            <td>45</td>
+                            <td>17500</td>
+                            <td>50</td>
+                            <td>10051</td>
+                            <td>31</td>
+                            <td>16600</td>
+                            <td>32</td>
+                            <td>10080</td>
+                        </tr>
+                        <tr>
+                            <td>Victor</td>
+                            <td>90</td>
+                            <td>18070</td>
+                            <td>17000</td>
+                            <td>4700</td>
+                            <td>20</td>
+                            <td>17800</td>
+                            <td>17000</td>
+                            <td>3000</td>
+                            <td>165</td>
+                            <td>17000</td>
+                            <td>17000</td>
+                            <td>4500</td>
+                        </tr>
+                    </table>
+                </div>
+
+
+
+            <h3 style="text-align: center;">Resultados - 03</h3>
+
+            <h4 style="text-align: center;">Teste de Mascaramento de Tons Harmônicos</h4>
+                
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="media/parte 3.ogg" type="audio/ogg">
+                    </audio>
+                </div>
+
+                <p style="text-align: center;">
+                    Na tabela a seguir são mostrados os fatores de atenuação necessários
+                    para acontecer o mascaramento temporal de três pares de frequências:
+                </p>
+
+                <p style="text-align: center;">
+                    2000 Hz e 1200 Hz
+                </p>
+                <p style="text-align: center;">
+                    600 Hz e 1000 Hz
+                </p>
+                <p style="text-align: center;">
+                    2400 Hz e 4000 Hz
+                </p>
+
+                <p style="text-align: center;">
+                    Para todos esses pares foram testadas a primeira seguida da segunda e vice-versa, resultando em 2 testes para cada par e 6 testes no total.
+                </p>
+
+                <p style="text-align: center;">
+                    As alteração feitas no script são mostradas no link abaixo:
+                </p>
+
+                <a href="">
+                    <h5 style="text-align: center;">Link para o Google Colab</h5>
+                </a>
+
+
+                <div style="text-align: center; padding-top: 1cm;">
+                    <table>
+                        <tr>
+                            <th>Integrante</th>
+                            <th>Tom encobridor</th>
+                            <th>Tom mascarado</th>
+                            <th>Fator de Atenuação</th>
+                        </tr>
+
+                        <tr>
+                            <td rowspan="6">Jonas</td>
+                            <td>2000</td>
+                            <td>1200</td>
+                            <td>-12</td>
+                        </tr>
+                        <tr>
+                            <td>1200</td>
+                            <td>2000</td>
+                            <td>-15</td>
+                        </tr>
+                        <tr>
+                            <td>600</td>
+                            <td>1000</td>
+                            <td>-15</td>
+                        </tr>
+                        <tr>
+                            <td>1000</td>
+                            <td>600</td>
+                            <td>-12</td>
+                        </tr>
+                        <tr>
+                            <td>2400</td>
+                            <td>4000</td>
+                            <td>-15</td>
+                        </tr>
+                        <tr>
+                            <td>4000</td>
+                            <td>2400</td>
+                            <td>-12</td>
+                        </tr>
+
+                        <tr>
+                            <td rowspan="6">Renan</td>
+                            <td>2000</td>
+                            <td>1200</td>
+                            <td>-15</td>
+                        </tr>
+                        <tr>
+                            <td>1200</td>
+                            <td>2000</td>
+                            <td>-15</td>
+                        </tr>
+                        <tr>
+                            <td>600</td>
+                            <td>1000</td>
+                            <td>-15</td>
+                        </tr>
+                        <tr>
+                            <td>1000</td>
+                            <td>600</td>
+                            <td>-12</td>
+                        </tr>
+                        <tr>
+                            <td>2400</td>
+                            <td>4000</td>
+                            <td>-15</td>
+                        </tr>
+                        <tr>
+                            <td>4000</td>
+                            <td>2400</td>
+                            <td>-15</td>
+                        </tr>
+
+                        <tr>
+                            <td rowspan="6">Robson</td>
+                            <td>2000</td>
+                            <td>1200</td>
+                            <td>-12</td>
+                        </tr>
+                        <tr>
+                            <td>1200</td>
+                            <td>2000</td>
+                            <td>-15</td>
+                        </tr>
+                        <tr>
+                            <td>600</td>
+                            <td>1000</td>
+                            <td>-15</td>
+                        </tr>
+                        <tr>
+                            <td>1000</td>
+                            <td>600</td>
+                            <td>-12</td>
+                        </tr>
+                        <tr>
+                            <td>2400</td>
+                            <td>4000</td>
+                            <td>-15</td>
+                        </tr>
+                        <tr>
+                            <td>4000</td>
+                            <td>2400</td>
+                            <td>-12</td>
+                        </tr>
+
+                        <tr>
+                            <td rowspan="6">Victor</td>
+                            <td>2000</td>
+                            <td>1200</td>
+                            <td>-15</td>
+                        </tr>
+                        <tr>
+                            <td>1200</td>
+                            <td>2000</td>
+                            <td>-15</td>
+                        </tr>
+                        <tr>
+                            <td>600</td>
+                            <td>1000</td>
+                            <td>-12</td>
+                        </tr>
+                        <tr>
+                            <td>1000</td>
+                            <td>600</td>
+                            <td>-15</td>
+                        </tr>
+                        <tr>
+                            <td>2400</td>
+                            <td>4000</td>
+                            <td>-12</td>
+                        </tr>
+                        <tr>
+                            <td>4000</td>
+                            <td>2400</td>
+                            <td>-12</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <h3 style="text-align: center;">Conclusões</h3>
+
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="media/conclusao1.ogg" type="audio/ogg">
+                    </audio>
+                </div>
+
+                <p style="text-align: center;">
+                    Decidiu-se considerar apenas os testes feitos com fones de ouvido
+                    para tirar conclusões quanto a audição dos membros já que ficou
+                    evidente que esse tipo de teste dá resultados mais compatíveis
+                    com e realidade e é o recomendado pelos próprios organizadores
+                    dos testes.
+                </p>
+
+                <p style="text-align: center;">
+                    As conclusões aqui não substituem a necessidade de consultas médicas
+                    regulares e não se comparam à precisão de testes clínicos.
+                </p>
+
+                <p style="text-align: center;">
+                    Ocorrem diferenças entre aparelhos utilizados e entre
+                    os integrantes do grupo. Existem vários motivos para
+                    essas diferenças, e provavelmente os resultados
+                    refletem combinações de todos esses fatores.
+                    Dentre eles, podemos citar:
+                </p>
+
+                <ul>
+                    <li>Limitações dos aparelhos</li>
+                    <li>Ressonâncias e ecos</li>
+                    <li>Fatores psicológicos</li>
+                </ul>
+
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="media/conclusao2.ogg" type="audio/ogg">
+                    </audio>
+                </div>
+
+                <h4 style="text-align: center;">Teste psicoacústico do Jonas</h4>
+                
+                <p style="text-align: center;">
+                    Foram observadas sensibilidades mínimas entre 15dB e 20dB para
+                    todas as frequências entre 250Hz e 8kHz, todas acima ou na
+                    borda da "banana" da fala humana. Conclui-se então que o Jonas
+                    não possui problemas de audição que possam prejudicar a comunicação.
+                </p>
+                <p style="text-align: center;">
+                    Foi observada uma frequência mínima audível de 52Hz e uma frequência
+                    máxima audível de 18500Hz, ambas sendo as maiores entre os outros
+                    membros do grupo. A frequência menos audível foi de 12000Hz, próximo
+                    à frequência mais audível de 10051Hz do Robson.
+                </p>
+
+                <h4 style="text-align: center;">Teste psicoacústico do Renan</h4>
+                
+                <p style="text-align: center;">
+                    Foram observadas sensibilidades mínimas entre 10dB e 15dB para
+                    o Renan nas frequências entre 250 Hz e 2kHz. Houve uma sensibilidade
+                    mínima de 20dB para 4kHz e de 5 dB para 8kHz. Esses resultados
+                    indicam que o Renan provavelmente também não possui problemas
+                    auditivos que dificultem sua comunicação e que possivelmente
+                    possui uma audição melhor do que a do Jonas.
+                </p>
+
+                <p style="text-align: center;">
+                    O Renan obteve uma frequência menos audível de 24Hz, a segunda
+                    menor de todas, e uma frequência máxima audível de 18200Hz.
+                    Além disso, observa-se que a frequência menos audível ao
+                    Renan coincide com a frequência mínima audível.
+                </p>
+
+                <h4 style="text-align: center;">Teste psicoacústico do Robson</h4>
+                
+                <p style="text-align: center;">
+                    Foram observadas sensibilidades mínimas entre 10dB e 15dB
+                    para frequências entre 250Hz e 2kHz, e sensibilidades mínimas
+                    de 20dB para as frequências de 4kHz e 8kHz. Esse é um resultado
+                    bom, levemente pior do que o resultado do Renan e levemente melhor
+                    do que o do Jonas.
+                </p>
+                <p style="text-align: center;">
+                    De forma similar ao Renan, o Robson possui uma frequência menos
+                    audível muito próxima à frequência mínima. Além disso, a frequência
+                    máxima audível pelo Robson é a menor de todas, fazendo com que ele
+                    tenha a menor faixa de frequência audível do grupo.
+                </p>
+
+                <h4 style="text-align: center;">Teste psicoacústico do Victor</h4>
+                
+                <p style="text-align: center;">
+                    Foram observadas sensibilidades mínimas entre 15dB e 20dB para
+                    as frequências entre 500Hz e 8kHz, e uma sensibilidade mínima
+                    de 30dB para 250Hz. Esse resultado pode indicar uma perda de audição,
+                    mas não é conclusivo porque pode haver interferência da qualidade
+                    do fone de ouvido utilizado ou de outro hardware de áudio.
+                </p>
+
+                <p style="text-align: center;">
+                    O Victor possui a menor frequência audível entre todos os membros
+                    do grupo, com 20Hz. Além disso, a frequência mais audível está
+                    em 3000Hz, sendo também a menor entre todos os membros do grupo.
+                    A frequência menos audível é a maior de todas e a frequência máxima
+                    é a segunda menor. Sendo assim, o Victor ouve muito bem frequências
+                    baixas, mas não ouve frequências mais altas tão bem quanto os outros
+                    membros do grupo.
+                </p>
+
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="media/conclusao3.ogg" type="audio/ogg">
+                    </audio>
+                </div>
+
+                <h4 style="text-align: center;">Teste Psicoacústico de Localização</h4>
+                
+                <p style="text-align: center;">
+                    Um teste que não foi realizado nesse laboratório é o teste
+                    psicoacústico de localização de fontes sonoras, em que
+                    são emitidos sons em torno do participante vendado e é
+                    avaliada sua precisão na determinação da direção desses sons.
+                    Esse teste envolve os mecanismos utilizados pelo cérebro
+                    para a determinação da localização de uma fonte sonora, que
+                    são principalmente a diferença no tempo de excitação dos
+                    ouvidos e a diferença em amplitude sonora.
+                </p>
+
+                <h4 style="text-align: center;">Um Resultado Recente de Pesquisa</h4>
+
+                <p style="text-align: center;">
+                    Em 2016 foi publicado um artigo por pesquisadores da UFBA e da
+                    UFCG que explora a percepção de direcionalidade de estímulos
+                    sonoros. Os resultados encontrados podem servir de base
+                    para a descoberta de novos métodos não-invasivos para a
+                    obtenção informações neurais.
+                </p>
+
+                <p style="text-align: center;">
+                    O artigo pode ser lido no link abaixo:
+                </p>
+
+                <a href="https://www.scielo.br/scielo.php?script=sci_arttext&pid=S2446-47402016000400327">
+                    <h5 style="text-align: center;">Artigo</h5>
+                </a>
+
+        </article>
+    </body>
+</html>
