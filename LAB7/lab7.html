@@ -1,0 +1,150 @@
+<html>
+    <head>
+        <title>Relatorio 7</title>
+
+        <style>
+            .center {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 70%;
+            }
+        </style>
+
+        <style>
+            table, td, th, tfoot {border:solid 1px #000; padding:5px; margin-left:auto; margin-right:auto; font-size: x-large;}
+            th {background-color:#999;}
+            caption {font-size:x-large;}
+            colgroup {background:#F60;}
+            .coluna1 {background:#F66;}
+            .coluna2  {background:#F33;}
+            .coluna3  {background:#F99;} 
+        </style>
+    </head>
+    <body>
+        <header style="text-align: center; padding-bottom: 40px;">
+            <img src="media/ufabc_logo.png" style="width: 150px; height: 150px;">
+            <h2>UNIVERSIDADE FEDERAL DO ABC</h2>
+            <h2>RELATÓRIO 7 - Codificação da Voz e Áudio</h2>
+
+            <a href="https://colab.research.google.com/drive/1Pbs-vCBYZlsl7xE7AuGp3_wFS4pnjMsi?usp=sharing">
+                <h5 style="text-align: center;">Google Colab Jonas</h5>
+            </a>
+            
+            <a href="https://drive.google.com/file/d/1IryKru4wsAFYOqcPXcXvM4qT9lC9iwut/view?usp=sharing">
+                <h5 style="text-align: center;">Google Colab Renan</h5>
+            </a>
+            
+            <a href="https://colab.research.google.com/drive/1qjg8hXFt7yt7Lhmjgt2N2uUlTmv8zSIc?usp=sharing">
+                <h5 style="text-align: center;">Google Colab Robson</h5>
+            </a>
+            
+            <a href="https://colab.research.google.com/drive/10w8_y88Gyh-F_pkCNxTjQI_kfa5YamND?usp=sharing">
+                <h5 style="text-align: center;">Google Colab Victor</h5>
+            </a>
+
+            <section style="margin-top: 60px;">
+                <h3>Resumo em áudio:</h3>
+                <audio controls>
+                    <source src="media/descricao1.ogg" type="audio/ogg">
+                </audio>
+            </section>
+        </header>
+        <hr/>
+        <article style="padding-bottom: 40px;">
+            <h3 style="text-align: center;">Procedimentos</h3>
+                <p style="text-align: center;">
+                    Nesta prática, foram gravados, por cada integrante do grupo, um áudio para ser processado e utilizado durante o experimento, cujos objetivos principais são
+                    a determinação dos parâmetros LPC, a separação sonora/surda e a visualização do espectro e da envoltória LP.
+                </p>
+                <p style="text-align: center;">
+                    Na primeira parte do laboratório, gravou-se áudios com conteúdos diversos. Posteriormente, realizou-se as leituras dos mesmos dentro do ambiente do Google Colab através do IPython.
+                </p>
+                <p style="text-align: center;">
+                    Na segunda parte do laboratório, realizaram-se o cálculo dos parâmetros LPC, foi efetuada a separação U/UV e do espectro e, por fim, a visualização da envoltória LPC. 
+                </p>
+                <p style="text-align: center;">
+                    Tudo isto foi feito utilizando as bibliotecas Matplotlib, Numpy, Librosa e IPython.
+                </p>
+            &nbsp;
+            <hr/>
+            <h2 style="text-align: center;">Resultados - 01</h2>
+
+            <h3 style="text-align: center;">Arquivos gravados</h3>
+                
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="media/descricao2.ogg" type="audio/ogg">
+                    </audio>
+                </div>
+
+                <p style="text-align: center; padding-top: 20px;">
+                    A seguir são mostrados os áudios gravados pelos integrantes do grupo para este experimento.
+                </p>
+                
+                <div style="text-align: center; padding-top: 20px;">
+                    <h3>Jonas</h3>
+                    <audio controls>
+                        <source src="" type="audio/wav">
+                    </audio>
+                </div>
+
+                
+                <div style="text-align: center; padding-top: 40px;">
+                    <h3>Renan</h3>
+                    <audio controls>
+                        <source src="" type="audio/wav">
+                    </audio>
+                </div>
+
+                <div style="text-align: center; padding-top: 40px;">
+                    <h3>Robson</h3>
+                    <audio controls>
+                        <source src="media/robson/Camoes_RobsonSantiago.wav" type="audio/wav">
+                    </audio>
+                    
+                    <div>
+                        <img src="media/robson/camoes.png">    
+                    </div>
+                </div>
+
+                <div style="text-align: center; padding-top: 40px;">
+                    <h3>Victor</h3>
+                    <audio controls>
+                        <source src="" type="audio/wav">
+                    </audio>
+                </div>
+                &nbsp;
+                <hr/>
+            
+            <h3 style="text-align: center;">Cálculo dos Parâmetros LPC, separação U/UV + Espectro e Envoltória LPC</h3>
+
+            <div style="text-align: center; padding-top: 20px;">
+                <h3>Robson</h3>
+                <div>
+                    <img src="media/robson/energia.png">    
+                </div>
+                &nbsp;
+                <div>
+                    <img src="media/robson/surdos_sonoros.png">    
+                </div>
+                &nbsp;
+                <div>
+                    <img src="media/robson/espectrograma.png">    
+                </div>
+            </div>
+
+            <hr/>
+                <h3 style="text-align: center;">Conclusões</h3>
+
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="media/descricao3.ogg" type="audio/ogg">
+                    </audio>
+                </div>
+                
+                <p style="text-align: center;">Inserir conclusão.</p>
+
+        </article>
+    </body>
+</html>
