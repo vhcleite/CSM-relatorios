@@ -27,7 +27,7 @@
             <h2>UNIVERSIDADE FEDERAL DO ABC</h2>
             <h2>RELATÓRIO 7 - Codificação da Voz e Áudio</h2>
 
-            <a href="https://colab.research.google.com/drive/1Pbs-vCBYZlsl7xE7AuGp3_wFS4pnjMsi?usp=sharing">
+            <a href="https://colab.research.google.com/drive/1GXFid90M2P9CJV27XCFjGZtW1zv2QGf3?usp=sharing">
                 <h5 style="text-align: center;">Google Colab Jonas</h5>
             </a>
             
@@ -46,7 +46,7 @@
             <section style="margin-top: 60px;">
                 <h3>Resumo em áudio:</h3>
                 <audio controls>
-                    <source src="media/descricao1.ogg" type="audio/ogg">
+                    <source src="media/descr1.ogg" type="audio/ogg">
                 </audio>
             </section>
         </header>
@@ -74,19 +74,26 @@
                 
                 <div style="text-align: center;">
                     <audio controls>
-                        <source src="media/descricao2.ogg" type="audio/ogg">
+                        <source src="media/descr2.ogg" type="audio/ogg">
                     </audio>
                 </div>
 
-                <p style="text-align: center; padding-top: 20px;">
-                    A seguir são mostrados os áudios gravados pelos integrantes do grupo para este experimento.
-                </p>
-                
-                <div style="text-align: center; padding-top: 20px;">
+                <div style="text-align: center; padding-top: 40px;">
                     <h3>Jonas</h3>
+                    <h4>Audio Nome e Sobrenome</h4>
                     <audio controls>
-                        <source src="" type="audio/wav">
+                        <source src="media/jonas/JonasSantosMarma.wav" type="audio/wav">
                     </audio>
+                    <div>
+                        <img src="media/jonas/onda_nomesobrenome.png">    
+                    </div>
+                    <h4>Audio Poema</h4>
+                    <audio controls>
+                        <source src="media/jonas/Camoes_JonasSantosMarma.wav" type="audio/wav">
+                    </audio>
+                    <div>
+                        <img src="media/jonas/onda_poema.png">
+                    </div>
                 </div>
 
                 
@@ -149,10 +156,66 @@
             <h2 style="text-align: center;">Cálculo dos Parâmetros LPC, separação U/UV + Espectro e Envoltória LPC</h2>
 
             <div style="text-align: center; padding-top: 20px;">
+                <h2>Jonas</h2>
+                <h3>Sinal Nome</h3>
+                <div>
+                    <img src="media/jonas/onda_nome.png">    
+                </div>
+                <div>
+                    <img src="media/jonas/hamming_nome.png">    
+                </div>
+                <div>
+                    <img src="media/jonas/energia_nome.png">    
+                </div>
+                <div>
+                    <img src="media/jonas/LPC_nome.png">    
+                </div>
+                <div>
+                    <img src="media/jonas/espectrograma_nome.png">    
+                </div>
+
+                <h3>Sinal Sobrenome</h3>
+                <div>
+                    <img src="media/jonas/onda_sobrenome.png">    
+                </div>
+                <div>
+                    <img src="media/jonas/hamming_sobrenome.png">    
+                </div>
+                <div>
+                    <img src="media/jonas/energia_sobrenome.png">    
+                </div>
+                <div>
+                    <img src="media/jonas/LPC_sobrenome.png">  
+                </div>
+                <div>
+                    <img src="media/jonas/espectrograma_sobrenome.png">    
+                </div>
+
+                <h3>Sinal Poema</h3>
+                                
+                <div>
+                    <img src="media/jonas/energia_poema.png">
+                </div>
+                <div>
+                    <p>Limiar VAD = 60.21</p>
+                    <p>Limiar U/UV = 84.21</p>
+                    
+                </div>
+                <div>
+                    <p>Segmentos Sonoros = 27</p>
+                    <img style="width: 80%" src="media/jonas/segmentos_sonoros.png">
+                </div>
+                <div>
+                    <p>Segmentos Surdos = 13</p>
+                    <img style="width: 80%" src="media/jonas/segmentos_surdos.png">
+                </div>
+            </div>
+            
+            <div style="text-align: center; padding-top: 20px;">
                 <h2>Renan</h2>
                 <h3>Sinal Nome</h3>
                 <div>
-                    <img src="media/renan/energia_nome.png">    
+                    <img src="media/renan/onda_nome.png">    
                 </div>
                 <div>
                     <img src="media/renan/hamming_nome.png">    
@@ -169,7 +232,7 @@
 
                 <h3>Sinal Sobrenome</h3>
                 <div>
-                    <img src="media/renan/energia_sobrenome.png">    
+                    <img src="media/renan/onda_sobrenome.png">    
                 </div>
                 <div>
                     <img src="media/renan/hamming_sobrenome.png">    
@@ -211,6 +274,9 @@
                     <img src="media/robson/primeiro_nome.png">    
                 </div>
                 <div>
+                    <img src="media/robson/vogal_nome.png">    
+                </div>
+                <div>
                     <img src="media/robson/stem_nome.png">    
                 </div>
                 <div>
@@ -223,6 +289,9 @@
                 <h3>Sinal Sobrenome</h3>
                 <div>
                     <img src="media/robson/sobrenome.png">    
+                </div>
+                <div>
+                    <img src="media/robson/vogal_sobrenome.png">    
                 </div>
                 <div>
                     <img src="media/robson/stem_sobrenome.png">    
@@ -258,7 +327,7 @@
                 <h2>Victor</h2>
                 <h3>Sinal Nome</h3>
                 <div>
-                    <img src="media/victor/energia_nome.png">    
+                    <img src="media/victor/onda_nome.png">    
                 </div>
                 <div>
                     <img src="media/victor/hamming_nome.png">    
@@ -275,7 +344,7 @@
 
                 <h3>Sinal Sobrenome</h3>
                 <div>
-                    <img src="media/victor/energia_sobrenome.png">    
+                    <img src="media/victor/onda_sobrenome.png">    
                 </div>
                 <div>
                     <img src="media/victor/hamming_sobrenome.png">    
@@ -315,11 +384,18 @@
 
                 <div style="text-align: center;">
                     <audio controls>
-                        <source src="media/descricao3.ogg" type="audio/ogg">
+                        <source src="media/descr3.ogg" type="audio/ogg">
                     </audio>
                 </div>
                 
-                <p style="text-align: center;">Inserir conclusão.</p>
+                <p style="text-align: center;">Conclui-se que o espectrograma e a energia de tempo curto de um
+                    sinal de áudio são ferramentas úteis na procura de fonemas surdos e sonoros em áudios.</p>
+                <p style="text-align: center;">Conclui-se ainda que o LPC é uma ferramenta que consegue
+                representar razoávelmente bem o espectro de um sinal, podendo ser então usado para fazer
+                predições a curto prazo sobre o sinal, possibilitando reconstruções pequenas.</p>
+                <p style="text-align: center;">Outra conclusão que pode ser retirada desse laboratório
+                é que fonemas surdos possuem espectros menos definidos do que fonemas sonoros, tendo também
+                menos energia, o que facilita inclusive a criação de algoritmos para suas identificações</p>
 
         </article>
     </body>
