@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>Relatorio 8</title>
+    <title>Relatorio 9</title>
 
     <style>
         .center {
@@ -56,8 +56,8 @@
         <h2>UNIVERSIDADE FEDERAL DO ABC</h2>
         <h2>RELATÓRIO 9 - MIDI e IR</h2>
 
-        <a href="https://colab.research.google.com/drive/1Pt04zI0B6vaFWn8fAWnyAAzGMbx6oer3#scrollTo=hPFKdX9GXbFv">
-            <h5 style="text-align: center;">Google Colab da Atividade</h5>
+        <a href="https://colab.research.google.com/drive/1PyDwo2Fhd4sp9nzM1490dqBSj6yYrozr#scrollTo=bNg9IqT8utWD">
+            <h5 style="text-align: center;">Google Colab Renan</h5>
         </a>
 
         <section style="margin-top: 100px;">
@@ -65,11 +65,128 @@
             <audio controls>
                 <source src="media/descr1.ogg" type="audio/ogg">
             </audio>
+            <p style="text-align: center;">
+                Nesta prática, os alunos deveriam criar e reproduzir áudios simples em formato MIDI, além de conseguir importar um MIDI externo à escolha do grupo e simular a execução desses áudios em ambientes através das respostas impulsivas (IR).
+            </p>
+            <p style="text-align: center;">
+                Na primeira parte do laboratório, foram criadas músicas simples usando MIDI e também a importação de um áudio externo encotnrado na internet, através do ambiente do Google Colab através do IPython.
+            </p>
+            <p style="text-align: center;">
+                Na segunda parte do laboratório,  foram feitas simulações da execução dos áudios nos ambientes <b>Ron Cooke Hub, University of York</b>, <b>Hamilton Mausoleum</b> e <b>York Guildhall Council Chamber</b>
+            </p>
+            <p style="text-align: center;">
+                Tudo isto foi feito utilizando as bibliotecas Matplotlib, Numpy, Librosa e Magenta e IPython.
+            </p>
         </section>
     </header>
 
     <article style="text-align: center; margin-top: 70px;">
+        <h2 style="text-align: center;">Resultados</h2>
+        <div style="text-align: center;">
+            <audio controls>
+                <source src="media/descr2.ogg" type="audio/ogg">
+            </audio>
+        </div>
+        <h3 style="text-align: center;">MIDIs utilizados</h3>
+            
+            <div style="text-align: center; padding-top: 40px;">
 
+                <h3 style="text-align: center;">Músicas</h3>
+                <h4>Composição Renan</h4>
+                <audio controls>
+                    <source src="media/renan/renan_musica.wav" type="audio/wav">
+                </audio>
+                <div><img style="width: 50%;" src="media/renan/renan_musica_plot.png" /></div>
+                <h4>Composição para o Grupo</h4>
+                <audio controls>
+                    <source src="media/renan/grupo_musica.wav" type="audio/wav">
+                </audio>
+                <div><img style="width: 50%;" src="media/renan/grupo_musica_plot.png" /></div>
+                <h4>Audio MIDI da internet</h4>
+                <audio controls>
+                    <source src="media/renan/01Sarabande.wav" type="audio/wav">
+                </audio>
+                <div><img style="width: 50%;" src="media/renan/01Sarabande_plot.png" /></div>
+                <hr/>
+                
+                <div style="text-align: center; padding-top: 40px;">
+                    <h3 style="text-align: center;">Respostas Impulsivas</h3>
+                    <h4><a href="https://www.openair.hosted.york.ac.uk/?page_id=632">IR - Ron Cooke Hub, University of York</a></h4>
+                    <p>Tamanho: 18000m³</p> 
+                    <audio controls>
+                        <source src="media/renan/fsfr.wav" type="audio/wav">
+                    </audio>
+                    <img src="media/renan/IR fsfr.wav.png" />
+                    <h5>renan_musica x Ron Cooke Hub, University of York</h5>
+                    <audio controls>
+                        <source src="media/renan/renan_fsfr.wav" type="audio/wav">
+                    </audio>
+                    <h5>grupo_musica x Ron Cooke Hub, University of York</h5>
+                    <audio controls>
+                        <source src="media/renan/grupo_fsfr.wav" type="audio/wav">
+                    </audio>
+                    <h5>01Sarabande x Ron Cooke Hub, University of York</h5>
+                    <audio controls>
+                        <source src="media/renan/sarabande_fsfr.wav" type="audio/wav">
+                    </audio>
+
+                    <hr/>
+                    <h4><a href="https://www.openair.hosted.york.ac.uk/?page_id=502">IR - Hamilton Mausoleum</a></h4>
+                    <p>Tamanho: 9000m³</p> 
+                    <audio controls>
+                        <source src="media/renan/hm2_000_wx_48k.wav" type="audio/wav">
+                    </audio>
+                    <img src="media/renan/IR hm2_000_wx_48k.wav.png" />
+                    <h5>renan_musica x Hamilton Mausoleum</h5>
+                    <audio controls>
+                        <source src="media/renan/renan_hm.wav" type="audio/wav">
+                    </audio>
+                    <h5>grupo_musica x Hamilton Mausoleum</h5>
+                    <audio controls>
+                        <source src="media/renan/grupo_hm.wav" type="audio/wav">
+                    </audio>
+                    <h5>01Sarabande x Hamilton Mausoleum</h5>
+                    <audio controls>
+                        <source src="media/renan/sarabande_hm.wav" type="audio/wav">
+                    </audio>
+
+                    <hr/>
+                    <h4><a href="https://www.openair.hosted.york.ac.uk/?page_id=790">IR - York Guildhall Council Chamber</a></h4>
+                    <p>Tamanho: 1140m³</p> 
+                    <audio controls>
+                        <source src="media/renan/councilchamber_s1_r1_ir_1_96000.wav" type="audio/wav">
+                    </audio>
+                    <img src="media/renan/IR councilchamber_s1_r1_ir_1_96000.wav.png" />
+                    <h5>renan_musica x York Guildhall Council Chamber</h5>
+                    <audio controls>
+                        <source src="media/renan/renan_chamber.wav" type="audio/wav">
+                    </audio>
+                    <h5>grupo_musica x York Guildhall Council Chamber</h5>
+                    <audio controls>
+                        <source src="media/renan/grupo_chamber.wav" type="audio/wav">
+                    </audio>
+                    <h5>01Sarabande x York Guildhall Council Chamber</h5>
+                    <audio controls>
+                        <source src="media/renan/sarabande_chamber.wav" type="audio/wav">
+                    </audio>
+
+                    
+                </div>
+            </div>
+            <hr/>
+            <div style="text-align: center; padding-top: 40px;">
+                <h3 style="text-align: center;">Conclusão</h3>
+                <div style="text-align: center;">
+                    <audio controls>
+                        <source src="media/descr3.ogg" type="audio/ogg">
+                    </audio>
+                </div>
+                <p>
+                    Ao final do experimento, pôde-se observar o funcionamento do sistema MIDI para composição de música, dentro do ambiente IPython. 
+                    E também, a simulação acústica de ambientes através de suas respostas impulsivas, podendo observar, 
+                    de maneira qualitiva, as propriedades acúsitcas dos ambientes e suas diferenças através do tamanho e arquitetura.
+                </p>
+            </div>
     </article>
 </body>
 
